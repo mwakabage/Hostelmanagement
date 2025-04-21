@@ -1,0 +1,34 @@
+{% extends './base.html' %}
+
+    {% block content %}
+
+    <form method="POST">
+        {%csrf_token%}
+        <div class="container" style="width:100%;">
+            <div class="card full-width-card w-100" >
+              <h1 class="card-title">Personal Information</h1>
+              <p class="card-text">
+                {%for user in users%}
+                <p>First Name: <strong style="color:blue;">{{user.first_name}}</strong></p><br><br>
+                <p>Middle Name:<strong style="color:blue;">{{user.middle_name}}</strong></p><br><br>
+                <p>Last Name:<strong style="color:blue;">{{user.last_name}}</strong></p><br>
+              
+              
+                      {% if user.room_number != 'Not Yet Assigned' %}
+                      <p>Room Number:<strong style="color:blue;">{{ user.room_number }}<p> 
+                          &nbsp;<a href="{%url 'release_room' user.id%}" class="btn btn-sm text-light btn-danger">Release Room</a>
+                      {% else %}
+                      <p>Room Number:<strong style="color:red;">{{ user.room_number }}<p> 
+                      {% endif %}
+              
+              </p>
+              
+                 {% endfor %}
+              </p>
+              
+            </div>
+       
+           </div>
+         
+    </form>
+    {% endblock %}

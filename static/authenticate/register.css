@@ -1,0 +1,113 @@
+/* General Form Styling */
+body{
+    background-color: #d8cfcf;
+}
+.form {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
+
+/* Form Title */
+h4 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #2f0cce;
+    margin-bottom: 20px;
+}
+.btn{
+    color: #ffffff;
+}
+/* Label Styling */
+label {
+    font-weight: 600;
+    color: #555;
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+/* Input Fields */
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+input:focus {
+    border-color: #6a11cb;
+    outline: none;
+    box-shadow: 0px 0px 5px rgba(106, 17, 203, 0.3);
+}
+
+/* Checkbox */
+.form-check {
+    display: inline-flex;
+    align-items: center;
+    gap: 8x; 
+
+}
+
+/* Register Button */
+.btn-primary {
+    background: #6a11cb;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background: #2575fc;
+}
+
+/* Login Link */
+.normal {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.text-primary {
+    color: #2575fc;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.text-primary:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .form {
+        padding: 20px;
+    }
+}
+
+
+.form-check-input {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0px;
+    vertical-align: middle;
+    width: 15px; /* Custom size */
+    height: 15px;
+    size-adjust: 3px;
+}
+.form-check-label {
+    font-size: 14px; /* Adjust text size */
+    margin-bottom: 9px;
+    margin-left: 7px;
+  }

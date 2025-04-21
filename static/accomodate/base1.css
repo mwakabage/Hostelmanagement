@@ -1,0 +1,82 @@
+/* Base styles for the footer */
+.footer {
+    background-color: #f8f9fa; /* Light background */
+    padding: 1.5rem 0; /* Vertical padding */
+    border-top: 1px solid #dee2e6; /* Subtle top border */
+    color: #6c757d; /* Muted text color */
+    font-size: 0.9rem; /* Slightly smaller font size */
+  }
+  
+  /* Container for aligning content */
+  .footer .d-sm-flex {
+    max-width: 1200px; /* Limit width for better readability on large screens */
+    margin: 0 auto; /* Center the content */
+    padding: 0 15px; /* Add some horizontal padding */
+  }
+  
+  /* Copyright text */
+  .footer .text-muted {
+    color: #6c757d;
+  }
+  
+  /* Navigation links */
+  .footer .nav {
+    margin-bottom: 0; 
+  }
+  
+  .footer .nav-item {
+    margin-left: 1rem; 
+  }
+  
+  .footer .nav-link {
+    color: #007bff; 
+    text-decoration: none;
+    transition: color 0.3s ease; 
+  }
+  
+  .footer .nav-link:hover {
+    color: #0056b3; 
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 576px) {
+    .footer .d-sm-flex {
+      flex-direction: column; 
+      text-align: center; 
+    }
+  
+    .footer .nav {
+      justify-content: center !important; 
+      margin-top: 0.5rem; 
+    }
+  
+    .footer .nav-item {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+    }
+  }
+  .nav-item .nav-link {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    color: #f3ecec;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+  }
+  
+  .nav-item .nav-link:hover {
+    background-color: #030303;
+    border-radius: 4px;
+  }
+  
+  .nav-item .nav-link i {
+    font-size: 18px;
+    margin-right: 10px; 
+    color: #555;
+  }
+  
+  .nav-item .menu-title {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  

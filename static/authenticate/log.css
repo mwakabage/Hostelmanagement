@@ -1,0 +1,123 @@
+/* Apply a full-screen gradient background */
+body {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  font-family: 'Arial', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+/* Style the form container */
+.auth-form-light {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Form Title */
+h4 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Subtitle */
+h6 {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Labels */
+label {
+  font-weight: 600;
+  color: #555;
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+/* Input Fields */
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-bottom: 15px;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #6a11cb;
+  outline: none;
+  box-shadow: 0px 0px 5px rgba(106, 17, 203, 0.3);
+}
+
+/* Checkbox and "Remember Me" */
+.form-check {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+/* Submit Button */
+.btn-primary {
+  background: #6a11cb;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: #2575fc;
+}
+
+/* Forgot Password Link */
+.auth-link {
+  font-size: 14px;
+  color: #2575fc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}
+
+/* Register Link */
+.normal {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #444;
+}
+
+.text-primary {
+  color: #2575fc;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.text-primary:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Styling */
+@media (max-width: 500px) {
+  .auth-form-light {
+      padding: 20px;
+  }
+}

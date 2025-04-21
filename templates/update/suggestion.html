@@ -1,0 +1,60 @@
+{% extends 'accomodation/base.html' %}
+
+{% block content %}
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Suggest Now
+</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Create  suggestion</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+<form class="form" method="POST">
+  {% csrf_token %}
+
+  <h4>Give your suggestion</h4>
+     
+  <div class="form-group">
+      <label for="{{ suggestion.id_for_label }}">Suggestion:</label>
+
+      {{ suggestion }}
+      
+
+  </div>
+<div>
+  <button type="submit" class="btn btn-block btn-primary">Submit</button>
+</div>
+
+</form>
+
+         </div>
+       </div>
+     </div>
+   </div>
+
+   <div class="container" style="width:100%;">
+          
+    {%for suggestion in suggestions%}
+            <div class="card full-width-card w-100 ">
+             
+            
+              <p class="card-text"><strong>{{suggestion.time}}</strong></p>
+              <h1 class="card-text">
+             
+                {{suggestion.suggestion}}
+              
+              </h1>
+            </div> <br>
+        
+            {% endfor %}
+        
+         
+
+   </div>
+
+{% endblock %}

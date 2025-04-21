@@ -1,0 +1,27 @@
+{% extends 'accomodation/base.html' %}
+
+    {% block content %}
+
+  
+        <div class="container" style="width:100%;">
+          
+            {%for announcement in announcements%}
+                    <div class="card full-width-card w-100 ">
+                     
+                      <h1 class="card-title">{{announcement.title}}</h1>
+                      <p class="card-text"><strong>{{announcement.time}}</strong></p>
+                      <p class="card-text">
+                     
+                        {{announcement.announcement}}
+                      
+                      </p>
+                    </div> <br>
+                
+                    {% endfor %}
+                
+                 
+     
+           </div>
+         
+
+    {% endblock %}

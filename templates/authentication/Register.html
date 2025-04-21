@@ -1,0 +1,91 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Admin</title>
+    <!-- plugins:css -->
+    <!--<link rel="stylesheet" href="{% static "static/authentication/themify.css" %}"> -->
+    <link rel="stylesheet" href="{% static 'authenticate/register.css' %}">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+   <!--<link rel="stylesheet" href="../../assets/css/style.css"> --> 
+  </head>
+  <body>
+    <div class="container-scroller">
+      <div class="container-fluid page-body-wrapper full-page-wrapper">
+        <div class="content-wrapper d-flex align-items-center auth">
+          <div class="row flex-grow">
+            <div class="col-lg-4 mx-auto">
+              <div class="auth-form-light text-left p-5">
+               <!-- <div class="brand-logo">
+                  <img src="../../assets/images/logo.svg">
+                </div> -->
+              <!--  <h6 class="fw-light">Signing up is easy. It only takes a few steps</h6> -->
+                <form class="form" method="POST">
+                    {% csrf_token%}
+                    <h4>REGISTER HERE</h4>
+
+                    <div class="name">
+                      <label for="{{first_name.id_for_label}}">First Name</label
+                      ><br />{{first_name}}<br />
+                    </div>
+
+                    <div class="name">
+                      <label for="{{middle_name.id_for_label}}">Middle Name</label
+                      ><br />{{middle_name}}<br />
+                    </div>
+                    <div class="name">
+                      <label for="{{last_name.id_for_label}}"
+                        >Last Name</label
+                      ><br />{{last_name}}<br />
+                    </div>
+
+                    <div class="number">
+                      <label for="{{phone_number.id_for_label}}"
+                        >Phone Number</label
+                      ><br />{{phone_number}}<br />
+                    </div>
+                    
+                    <div class="email">
+                      <label for="{{email.id_for_label}}">Email</label
+                      ><br />{{email}}<br />
+                    </div>
+
+                    <div class="password">
+                      <label for="{{password.id_for_label}}">Password</label
+                      ><br />{{password}}<br />
+                    </div>
+                  <div class="check">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="termsCheckbox">
+                      <label class="form-check-label text-muted" for="termsCheckbox">
+                        I agree to all Terms & Conditions
+                      </label>
+                    </div>
+                    
+                  </div>
+                  <div class="">
+                    <button type="submit" class="btn btn-block btn-primary">REGISTER</button>
+                  </div>
+                  <div class="normal"> 
+                    Already have an account? <a href="{%url 'login'%}" class="text-primary">Login</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+   
+  </body>
+</html>

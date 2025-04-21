@@ -1,0 +1,73 @@
+/* Make the container take full height and center the content */
+.container {
+    display: flex;
+    justify-content: center;  /* Centers horizontally */
+    align-items: center;      /* Centers vertically */
+    height: 100vh;            /* Full viewport height */
+    background: linear-gradient(to right, hsl(210, 14%, 95%), hsl(180, 13%, 95%)); /* Soft gradient background */
+    padding: 20px; /* Prevents edges from touching */
+}
+
+
+
+/* Card Title */
+.card h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Personal Info Styling */
+.card p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Room Number Color Handling */
+.card strong {
+    color: #bec2c7; /* Blue text */
+}
+
+/* Adjust the release button */
+.btn-danger {
+    background: #dc3545;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.btn-danger:hover {
+    background: #c82333;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 95%;
+        padding: 20px;
+    }
+}
+.full-width-card {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 12px;
+    background-color: #fff;
+}
+
+.card-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.card-body p {
+    font-size: 1.1rem;
+}
+
+hr {
+    border-top: 1px solid #ccc;
+}
