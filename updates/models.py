@@ -9,7 +9,7 @@ class Suggestion(models.Model):
     time=models.DateTimeField(auto_now_add=True)
 
 class Announcement(models.Model):
-    user=models.ForeignKey(User,on_delete=models.CASCADE)
+    user=models.ForeignKey(User,on_delete=models.CASCADE,blank=False,null=False)
     title=models.CharField(max_length=300,blank=False,null=False)
     time=models.DateTimeField(auto_now_add=True)
     announcement=models.TextField(max_length=250,blank=True,null=True)
