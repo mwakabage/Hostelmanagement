@@ -1,10 +1,15 @@
+
+from django.views.decorators.csrf import csrf_exempt
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
 from .serializers import RoomSerializer, RoomAssignmentSerializer
 from .models import Room, RoomAssignment
 
+
+
 @api_view(['GET', 'POST'])
+@csrf_exempt 
 def room_list_create(request):
     if request.method == 'GET':
         rooms = Room.objects.all()
@@ -17,7 +22,9 @@ def room_list_create(request):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+
 @api_view(['GET', 'PUT', 'DELETE'])
+@csrf_exempt
 def room_detail(request, pk):
     try:
         room = Room.objects.get(pk=pk)
@@ -38,6 +45,7 @@ def room_detail(request, pk):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 @api_view(['GET', 'POST'])
+@csrf_exempt
 def room_assignment_list_create(request):
     if request.method == 'GET':
         room_assignments = RoomAssignment.objects.all()
@@ -51,6 +59,7 @@ def room_assignment_list_create(request):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(['GET', 'PUT', 'DELETE'])
+@csrf_exempt
 def room_assignment_detail(request, pk):
     try:
         room_assignment = RoomAssignment.objects.get(pk=pk)

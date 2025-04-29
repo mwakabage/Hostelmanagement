@@ -11,9 +11,9 @@ urlpatterns = [
      
      
     #API Part 
-    path('rooms/', views_api.room_list_create, name='room_list_create'),
-    path('rooms/<int:pk>/', views_api.room_detail, name='room_detail'),
-    path('room_assignments/', views_api.room_assignment_list_create, name='room_assignment_list_create'),
-    path('room_assignments/<int:pk>/', views_api.room_assignment_detail, name='room_assignment_detail'),
+    path('api/rooms/', views_api.room_list_create, name='api_room_list'),
+    path('api/rooms/<int:pk>/', views_api.room_detail, name='api_room_detail'),
+    path('api/room_assignments/', views_api.room_assignment_list_create, name='api_room_assignment_list'),
+    path('api/room_assignments/<int:pk>/', views_api.room_assignment_detail, name='api_room_assignment_detail'),
 
 ]

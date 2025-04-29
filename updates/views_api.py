@@ -1,10 +1,14 @@
 from rest_framework.decorators import api_view
+from django.views.decorators.csrf import csrf_exempt
 from rest_framework.response import Response
 from rest_framework import status
 from .serializers import AnnoucementSerializers, SuggestionSerializer
 from .models import Announcement, Suggestion
 
+
+
 @api_view(['GET', 'POST'])
+@csrf_exempt
 def announcement_list_create(request):
     if request.method == 'GET':
         announcements = Announcement.objects.all()
@@ -18,6 +22,7 @@ def announcement_list_create(request):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(['GET', 'PUT', 'DELETE'])
+@csrf_exempt
 def announcement_detail(request, pk):
     try:
         announcement = Announcement.objects.get(pk=pk)
@@ -38,6 +43,7 @@ def announcement_detail(request, pk):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 @api_view(['GET', 'POST'])
+@csrf_exempt
 def suggestion_list_create(request):
     if request.method == 'GET':
         suggestions = Suggestion.objects.all()
@@ -51,6 +57,7 @@ def suggestion_list_create(request):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(['GET', 'PUT', 'DELETE'])
+@csrf_exempt
 def suggestion_detail(request, pk):
     try:
         suggestion = Suggestion.objects.get(pk=pk)
